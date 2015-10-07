@@ -1,0 +1,28 @@
+tag:		DP
+description:	
+	You are given an array of positive integers a1, a2, ..., an × T of length n × T. We know that for any i > n it is true that ai = ai - n. Find the length of the longest non-decreasing sequence of the given array.
+Input
+
+	The first line contains two space-separated integers: n, T (1 ≤ n ≤ 100, 1 ≤ T ≤ 107). The second line contains n space-separated integers a1, a2, ..., an (1 ≤ ai ≤ 300).
+	Output
+
+	Print a single number — the length of a sought sequence.
+	Sample test(s)
+	Input
+
+	4 3
+	3 1 4 2
+
+	Output
+
+	5
+
+	Note
+
+	The array given in the sample looks like that: 3, 1, 4, 2, 3, 1, 4, 2, 3, 1, 4, 2. The elements in bold form the largest non-decreasing subsequence.
+
+solution:
+	n   and    T
+	3 1 4 2 3 1 4 2...
+	for 3 1 4 2,we have 3 4 ,1 2,  4,  2 as of sub-seq of each element,let it be h[i],they shoul be sorted by length and if length equal by last element
+	if solved T-1 ,if the chose of T-1 is h[k{T-1}],for T,h[k{T}] could be increment of h[k{T}].len if k{T}.first>=k{T-1}.last

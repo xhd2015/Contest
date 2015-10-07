@@ -1,0 +1,9 @@
+tag:		DP
+problem:	Given n-pos shops,find m store point to make the minium distance
+solution:	let dp[i][j] be the 0...i and with j-store-points,then we have 
+to cacl all the possibilities that j has with i.Now let's think about the j 
+store point if j-1 store point is sloved and stored.
+		There are multi-conditions that j might take,if from 0...i all 
+belong to j,or if 1...i belong to j, ... ,or if i...i belong to j,or none
+belong to j.Think about all the possibilities,we have this equotion"
+			dp[i][j]=min(0<=k<=i){dp[k][j-1]+cost[k][i]}
