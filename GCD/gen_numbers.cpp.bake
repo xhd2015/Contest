@@ -1,0 +1,33 @@
+#include<cstdio>
+
+void printNums(int x1,int a,int b,int T);
+int main()
+{
+	int x1,a,b,T;
+	scanf("%d%d%d%d",&x1,&a,&b,&T);
+	printNums(x1,a,b,T);
+	
+	
+	
+	return 0;	
+	
+
+}
+
+void printNums(int x1,int a,int b,int T)
+{	
+	printf("%d\n",T);
+	printf("%d ",x1);
+	while(--T)
+	{
+	x1=(a*x1+b)%10001;
+	printf("**%d ",x1);
+	x1=(a*x1+b)%10001;
+	printf("%d ",x1);
+	}
+
+}
+		
+		
+	
+
