@@ -15,18 +15,18 @@
 *-b/a.0	-
 *
 */
-std::vector<int> line_mod_equotion(const int a,const int b,const int n)
+std::vector<long long> line_mod_equotion(const long long a,const long long b,const long long n)
 {
-	std::vector<int> ret;
-	int x,y;
-	int d=extended_gcd(a,n,x,y,1);
+	std::vector<long long> ret;
+	long long x,y;
+	long long d=extended_gcd(a,n,x,y,1);
 	ret.clear();	
 	if(b%d==0)
 	{
 		x%=n;x+=n;x%=n;
 		x=x*b/d%n;
 		ret.push_back(x);
-		for(int i=1;i<d;++i)
+		for(long long i=1;i<d;++i)
 			ret.push_back((x+i*n/d)%n);
 	}
 	return ret;

@@ -9,11 +9,11 @@
 */
 
 
-int extended_gcd(int a,int b,int &x,int &y,const int &start=1)
+long long extended_gcd(long long a,long long b,long long &x,long long &y,const long long &start=1)
 {
 	if(b==0){x=1;y=start;return a;}
 	else {
-		int ret=extended_gcd(b,a%b,y,x,start);
+		long long ret=extended_gcd(b,a%b,y,x,start);
 		y-=a/b*x;
 		return ret;
 	}
